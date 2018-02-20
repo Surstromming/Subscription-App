@@ -1,0 +1,8 @@
+@import '~settings';
+
+.header {
+  $this: &;
+  text-align: center;
+  padding: 25px 0;
+  background-color: $color-light;
+}

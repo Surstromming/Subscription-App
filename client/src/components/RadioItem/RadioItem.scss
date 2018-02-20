@@ -1,0 +1,41 @@
+@import '~settings';
+
+.radio-item {
+  $this: &;
+  flex: 1 1 0;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    cursor: pointer;
+    color: $color-grey;
+    border: 1px solid $color-pale-grey;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: $weight-bold;
+    will-change: border, background-color, color;
+    transition:
+      border .3s ease-in-out,
+      background-color .3s ease-in-out,
+      color .3s ease-in-out;
+
+    #{$this}__input:checked ~ & {
+      border: 2px solid $color-green;
+      color: $color-dark;
+
+      .no-touchevents &:hover,
+      &:focus {
+        border: 2px solid $color-green;
+        color: $color-dark;
+      }
+    }
+
+    .no-touchevents &:hover,
+    &:focus {
+      background-color: $color-light;
+    }
+  }
+}
+

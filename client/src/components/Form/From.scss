@@ -1,0 +1,59 @@
+@import '~settings';
+
+.form {
+  $this: &;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__row + &__row {
+    margin-top: 25px;
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    color: $color-grey;
+    margin-bottom: 5px;
+  }
+
+  &__field {
+    width: 100%;
+    border: 1px solid $color-pale-grey;
+    height: 50px;
+    padding: 0 15px;
+    outline: none;
+    color: $color-dark;
+    font-size: 14px;
+    line-height: 1.36;
+    font-weight: $weight-bold;
+    will-change: border-color;
+    transition: border-color .3s ease-in-out;
+    appearance: none;
+    background: none;
+    border-radius: 0;
+
+    .no-touchevents &:hover,
+    &:focus {
+      border-color: $color-green;
+    }
+  }
+
+  &__select {
+    position: relative;
+
+    #{$this}__field {
+      padding-right: 35px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 12px;
+    margin: auto 0;
+    color: $color-pale-grey;
+  }
+}

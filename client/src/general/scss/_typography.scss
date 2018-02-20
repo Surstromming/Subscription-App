@@ -1,0 +1,30 @@
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+html {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: $weight-bold;
+  color: $color-dark;
+}
+
+.summary {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 18px;
+  color: $color-dark;
+
+  p + p {
+    margin-top: 20px;
+  }
+}

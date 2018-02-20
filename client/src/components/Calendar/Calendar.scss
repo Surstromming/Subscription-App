@@ -1,0 +1,59 @@
+@import '~settings';
+
+.calendar {
+  $this: &;
+  border: 1px solid $color-pale-grey;
+
+  &__header {
+    display: flex;
+    padding: 5px 15px;
+    background-color: $color-light;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  &__cell {
+    font-size: 14px;
+    font-weight: $weight-bold;
+    flex: 1 0 20%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .is-active & {
+      background-color: $color-green;
+      color: $color-white;
+      border-radius: 50%;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    color: $color-dark;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .is-active &,
+    .is-highlighted & {
+      border-radius: 50%;
+    }
+
+    .is-active & {
+      background-color: $color-green;
+      color: $color-white;
+    }
+
+    .is-highlighted & {
+      background-color: $color-light;
+    }
+  }
+}

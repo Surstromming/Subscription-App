@@ -1,0 +1,20 @@
+.button {
+  $this: &;
+  @include reset-button();
+  width: 100%;
+  background-color: $color-green;
+  color: $color-white;
+  height: 50px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: $weight-bold;
+  letter-spacing: 2.3px;
+  cursor: pointer;
+  will-change: background-color;
+  transition: background-color .3s ease-in-out;
+
+  .no-touchevents &:hover,
+  .no-touchevents &focus {
+    background-color: rgba($color-green, .8);
+  }
+}
