@@ -35,9 +35,10 @@ export default class Summary extends React.Component {
         <Header title="Your Summary" />
         <div className="container">
           <div className="summary">
-            <p>Thanks for creating a subscription <strong>{this.state.chosenName}</strong>, your first package will be delivered on <strong>{startDate}</strong>.</p>
+            <p>Thanks for creating a subscription for <strong>{this.state.chosenName}</strong>!</p>
+            <p>Our first package will be delivered on <strong>{startDate}</strong>.</p>
             <p>Just <strong>{nights}</strong> nights of sleep left...</p>
-            <p>After that you will receive our beautiful packages every <strong>{this.state.chosenFrequencyId}</strong> weeks on <strong>{parseWeekday(this.state.chosenMomentId)}</strong>.</p>
+            <p>After that <strong>{this.state.chosenName}</strong> will receive our beautiful packages every <strong>{this.state.chosenFrequencyId}</strong> weeks on <strong>{parseWeekday(this.state.chosenMomentId)}</strong>.</p>
           </div>
         </div>
       </div>
