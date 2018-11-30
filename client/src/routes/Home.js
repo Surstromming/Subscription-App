@@ -8,7 +8,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <Header title="Your Submission" />
+        <Header title="Your Subcription" />
         <Subscription />
       </div>
     );
