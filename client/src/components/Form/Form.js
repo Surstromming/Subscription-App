@@ -40,8 +40,9 @@ export default class Form extends React.Component {
       <form className="form" onSubmit={this.props.handleSubmit}>
         <h2 className="form__title title">Who is your recipient?</h2>
         <Input
-          label="First Name"
+          label="Full Name"
           placeholder="e.g. Jon Snow"
+          id="chosenName"
           name="chosenName"
           handleChange={this.props.handleChange}
           value={this.props.chosenName}
@@ -51,6 +52,7 @@ export default class Form extends React.Component {
           optionValues={countryIds}
           label='Country'
           placeholder='Choose the country'
+          id="chosenCountryId"
           name="chosenCountryId"
           value={this.props.chosenCountryId}
           handleChange={this.props.handleChange}
@@ -60,6 +62,7 @@ export default class Form extends React.Component {
           optionValues={momentIds}
           label='Delivery Moments'
           placeholder='Choose the delivery moment'
+          id="chosenMomentId"
           name="chosenMomentId"
           value={this.props.chosenMomentId}
           handleChange={this.props.handleChange}

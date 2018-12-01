@@ -10,12 +10,13 @@ export default class Dropdown extends React.Component {
   render() {
     return(
       <div className="form__row">
-      <label className="form__label">
+      <label className="form__label" htmlFor={this.props.id}>
         {this.props.label}
       </label>
       <div className="form__select">
         <select
           className="form__field"
+          id={this.props.id}
           name={this.props.name}
           value={this.props.value}
           onChange={this.props.handleChange}
